@@ -52,3 +52,15 @@ console.log(`${cm}cm sama dengan ${km}km`);
 console.log("");
 console.log("===[Module Exercise No.4]===");
 //Write a code to format number as currency (IDR)!
+
+var nominal = 1000000; //<--- masukkan input disini
+var nominal = nominal.toString()
+let formatNominal = nominal.toString().length;
+let newFormat = '';
+for (let i = formatNominal; i > 0; i--)
+{
+    newFormat += nominal[formatNominal - i]
+    if ((i - 1) % 3 == 0 && (i - 1) != 0)
+    {newFormat += '.'}
+}
+console.log(`Rp. ${newFormat},00`);
